@@ -1,0 +1,10 @@
+language: groovy
+before_install:
+  - gradle wrapper
+  - sudo chmod +x run-publish.sh
+jdk:
+  - oraclejdk7
+notifications:
+  email:    
+    - Marco.Cadima@jalasoft.com    
+after_success: "./run-publish.sh"
